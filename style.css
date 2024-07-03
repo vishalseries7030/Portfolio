@@ -1,0 +1,237 @@
+/* Reset and base styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Links */
+a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffa07a;
+}
+
+/* Navbar */
+nav {
+    background: linear-gradient(to right, #333, #555);
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    padding: 10px 12px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #333;
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #333, #555);
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-attachment: fixed;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    animation: slideIn 2s forwards;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main sections */
+section {
+    padding: 40px 20px;
+    scroll-behavior: smooth;
+}
+
+/* About section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: white;
+}
+
+.about-content div p {
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* About Image */
+#about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border: 5px solid #333;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#about img:hover {
+    transform: scale(1.1);
+    border-color: #ff6347;
+}
+
+/* Skills section */
+#skills ul {
+    list-style: disc;
+    padding: 0 20px;
+}
+
+#skills li {
+    background: #2c2c2c;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#skills li:hover {
+    background-color: #3e3e3e;
+    transform: translateY(-5px);
+}
+
+/* Projects section */
+.project {
+    background: #2c2c2c;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project ul {
+    list-style: disc;
+    padding: 0 20px;
+}
+
+.project li {
+    margin: 10px 0;
+    padding: 12px;
+    background: #3e3e3e;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.project li:hover {
+    background-color: #4e4e4e;
+    transform: translateX(5px);
+}
+
+/* Resume button */
+#resume a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(to right, #ff6347, #ff4500);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#resume a:hover {
+    background-color: #ff4500;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #333, #555);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    #about img {
+        width: 120px;
+        height: 120px;
+        margin-right: 10px;
+    }
+
+    #skills li,
+    .project li,
+    .project {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}

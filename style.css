@@ -155,9 +155,9 @@ section#about {
 }
 
 .about-content img {
-    max-width: 250px;
-    /* width: 200px;
-    height: 200px; */
+   /* max-width: 250px;*/
+    width: 200px;
+    height: 200px; 
     border: 6px solid #333;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
